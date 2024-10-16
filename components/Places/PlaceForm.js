@@ -3,12 +3,15 @@ import { Colors } from "../../constants/colors";
 import { useState } from "react";
 import ImagePicker from "./ImagePicker";
 import LoacationPacker from "./LocationPicker";
+import Button from "../UI/Button";
 
 export default function PlaceForm() {
   const [enteredTitle, setEnteredTitle] = useState();
   function changeTitleHandler(enteredText) {
     setEnteredTitle(enteredText);
   }
+
+  function savePlaceHandler() {}
 
   return (
     <ScrollView style={styles.form}>
@@ -21,6 +24,7 @@ export default function PlaceForm() {
         />
         <ImagePicker />
         <LoacationPacker />
+        <Button onPress={savePlaceHandler}>Add Place</Button>
       </View>
     </ScrollView>
   );

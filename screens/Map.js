@@ -32,7 +32,7 @@ export default function Map({ navigation }) {
 
     navigation.navigate("AddPlace", {
       pickedLat: selectedLocation.lat,
-      pickedlLng: selectedLocation.lng,
+      pickedLng: selectedLocation.lng,
     });
   },[navigation,selectedLocation]);
 
