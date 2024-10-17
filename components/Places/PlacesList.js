@@ -13,18 +13,24 @@ export default function PlacesList({ places }) {
     );
   }
 
+  console.log(places)
+
   return (
     <FlatList
+      style={styles.list}
       data={places}
       keyExtractor={(item) => item.id}
-      renderItem={({ item }) => {
-        <PlaceItem place={item} />;
+      renderItem={(itemData) => {
+        <PlaceItem place={itemData.data} />;
       }}
     />
   );
 }
 
 const styles = StyleSheet.create({
+  list:{
+    margin:24,
+  },
   fallbackContainer: {
     flex: 1,
     justifyContent: "center",
