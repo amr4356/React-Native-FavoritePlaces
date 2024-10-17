@@ -25,7 +25,7 @@ export default function App() {
       });
   }, []);
 
-  if (!dbInitialized) {
+  if (dbInitialized) {
     return <LoadingOverlay />;
   }
 
