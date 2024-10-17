@@ -1,7 +1,7 @@
-import { Image, Pressable, StyleSheet, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../../constants/colors";
 
-export default function PlaceItem({ place, onSelect }) {
+export default function SinglePlaceItem({ place, onSelect }) {
   return (
     <Pressable
       style={({ pressed }) => [styles.item, pressed && styles.pressed]}
@@ -9,8 +9,8 @@ export default function PlaceItem({ place, onSelect }) {
     >
       <Image style={styles.image} source={{ uri: place.imageUri }} />
       <View style={styles.info}>
-        <View style={styles.title}>{place.title}</View>
-        <View style={styles.address}>{place.address}</View>
+        <Text style={styles.title}>{place.title}</Text>
+        <Text style={styles.address}>{place.address}</Text>
       </View>
     </Pressable>
   );

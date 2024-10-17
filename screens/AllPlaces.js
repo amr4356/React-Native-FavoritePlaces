@@ -8,11 +8,8 @@ export default function AllPlaces({ route }) {
 
   const isFocused = useIsFocused();
 
-
-  
   useEffect(() => {
     if (isFocused && route.params) {
-      console.log(route.params.place);
       setLoadedPlaces((curPlaces) => [...curPlaces, route.params.place]);
     }
   }, [isFocused, route]);
